@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Semaphore</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script type="text/javascript"><!--
+
+  function changeLight() {
+    currLight++;
+    if (currLight == 3) {
+      currLight = 0;
+    }
+    switch (currLight) {
+      case 0:
+        document.getElementById("green").style.backgroundColor = "#00ff00";
+        document.getElementById("red").style.backgroundColor = "#400000";
+        break;
+      case 1:
+        document.getElementById("yellow").style.backgroundColor = "#ff8000";
+        document.getElementById("green").style.backgroundColor = "#002000";
+        break;
+      case 2:
+        document.getElementById("red").style.backgroundColor = "#ff0000";
+        document.getElementById("yellow").style.backgroundColor = "#c06000";
+        break;
+    }
+  }
+
+  var currLight = 0;
+  var intervaler = setInterval(changeLight, 10000);
+
+// --></script>
+</head>
+<body>
+
+<table>
+<tr>
+<td id="red"><img src="./images/semaphoreCasing.png" /></td>
+<td id="yellow"><img src="./images/semaphoreCasing.png" /></td>
+<td id="green"><img src="./images/semaphoreCasing.png" /></td>
+</tr>
+</table>
+
+</body>
+</html>
