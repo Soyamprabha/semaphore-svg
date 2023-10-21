@@ -17,36 +17,13 @@
       <circle id="semaphoreCasing" cx="300" cy="200" r="180" fill="#ccc" />
 
       <!-- Define Red Light -->
-      <circle id="red" cx="300" cy="100" r="40" fill="#ff0000" />
+      <circle id="red" cx="300" cy="100" r="40" fill="#cc3232" />
 
       <!-- Define Yellow Light -->
-      <circle id="yellow" cx="300" cy="200" r="40" fill="#ff8000" />
+      <circle id="yellow" cx="300" cy="200" r="40" fill="	#e7b416" />
 
       <!-- Define Green Light -->
-      <circle id="green" cx="300" cy="300" r="40" fill="#00ff00" />
+      <circle id="green" cx="300" cy="300" r="40" fill="#2dc937" />
     </svg>
-
-    <script type="text/javascript">
-      function changeLight() {
-        currLight++;
-        if (currLight == 3) {
-          currLight = 0;
-        }
-        document.getElementById("red").style.fill = lightColors[currLight].red;
-        document.getElementById("yellow").style.fill =
-          lightColors[currLight].yellow;
-        document.getElementById("green").style.fill =
-          lightColors[currLight].green;
-      }
-
-      var currLight = 0;
-      var lightColors = [
-        { red: "#ff0000", yellow: "#c06000", green: "#002000" },
-        { red: "#400000", yellow: "#ff8000", green: "#002000" },
-        { red: "#400000", yellow: "#602000", green: "#00ff00" },
-      ];
-
-      var intervaler = setInterval(changeLight, 10000);
-    </script>
   </body>
 </html>
